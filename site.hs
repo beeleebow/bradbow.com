@@ -20,6 +20,10 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
+    match "js/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match (fromList ["about.md", "misc.md"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
