@@ -11,28 +11,35 @@ While this seems like a sane and flexible approach, it comes at the cost of "rea
 
 An **expression** is a composition of values and sub-expressions which, upon *evaluation*, reduces to a single value. Let's take some simple mathematical examples.
 
-```
-1. 5 + 7
-2. 3 * (4 - 1)
-3. 7*x + 5
-```
+<pre class="line-numbers"><code class="language-csharp">5 + 7
+3 * (4 - 1)
+7*x + 5
+</code></pre>
 
 Example 1 is a *simple* expression, meaning there is only one evaluation needed to produce a value, in this case `12`. The second example is a *compound* expression because it is composed of two simple sub-expressions. First, we evaluate `4-1`, then we multiply that value with `3`. Finally, example 3 is a *parameterised, compound* expression. Given a value for `x` (the parameter) we can evaluate `7*x` then add `5` to this value.
 
 A **statement** does not produce a value. It is an imperative instruction to the machine to do something. Let's have a look at some familiar statements.
 
-```csharp
-var x = 1;
+<pre id="ex1"><code class="language-csharp">var x = 1;
+
 Console.WriteLine("I am a statement");
-_logger.Info("Logger calls don't produce values, only side-effects");
+
+_logger.Info("I am a side-effect. Boo!");
 
 var firstInteger = -1;
+
 if(_listOfIntegers.Length > 0){
   firstInteger = _listOfIntegers[0];
 }
-```
+</code></pre>
 
-`var x = 1;` is a statement (i.e. the *assignment* statement). It says: "Give me enough memory to hold an integer, put the value `1` into that memory, and address the memory as `x` so I can refer to it later". Writing to the Console or logging are also statements. You don't get values back from running them. The `if` construct in most languages executes blocks of statements if a certain predicate (i.e. an *expression* that evaluates to a bool) is true.
+<code class="language-csharp">var x = 1;</code> is a statement (i.e. the *assignment* statement).
+It says: "Give me enough memory to hold an integer, put the value `1` into that memory, and address
+the memory as <code class="language-csharp">x</code> so I can refer to it later".
+Writing to the Console or logging are also statements. You don't get values back
+from running them. The <code class="language-csharp">if</code> construct in most
+languages executes blocks of statements if a certain predicate (i.e. an *expression*
+that evaluates to a <code class="language-csharp">bool</code>) is true.
 
 ## So what's the problem?
 
@@ -42,8 +49,7 @@ The problem, then, is that statements are **always side-effecting**. Think about
 
 In most programming languages expressions may or may not produce a side effect. Consider the following C# code.
 
-```csharp
-public int PureAdd(int x, int y)
+<pre id="ex1"><code class="language-csharp">public int PureAdd(int x, int y)
 {
   return x + y;
 }
@@ -53,9 +59,9 @@ public int ImpureAdd(int x, int y)
   Console.WriteLine($"Adding {x} and {y}");
   return x + y;
 }
-```
+</code></pre>
 
-Invocations of both `PureAdd` and `ImpureAdd` are expressions because they produce values. Evaluation of `ImpureAdd`, however, also produces the side effect of writing a message to the console. Notice how the side effect is achieved though? Thats right, via a statement.
+Invocations of both <code class="language-csharp">PureAdd</code> and <code class="language-csharp">ImpureAdd</code> are expressions because they produce values. Evaluation of <code class="language-csharp">ImpureAdd</code>, however, also produces the side effect of writing a message to the console. Notice how the side effect is achieved though? Thats right, via a statement.
 
 > As an aside, a "pure" functional programming language is one that has only expressions and does not permit side effects. Programs written in these languages are simply the composition of smaller expressions into a single compound expression (i.e. the "program").
 
