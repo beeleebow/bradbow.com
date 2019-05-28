@@ -8,14 +8,6 @@ body {
   color: #000;
 }
 
-pre {
-  position: relative;
-  width: 100vw;
-  padding: 50px;
-  left: calc(-50vw + 50%);
-  background-color: green;
-}
-
 header {
   border-bottom: 0.2rem solid #000;
 }
