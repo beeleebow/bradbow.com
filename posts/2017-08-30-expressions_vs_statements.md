@@ -4,8 +4,8 @@ title: "How to express yourself without effecting others"
 
 ## TL;DR
 
-*Most programmers build programs out of a mix of expressions (things that can be evaluated to produce a value, e.g. `5 + 7`) and statements (imperative instructions to a machine, e.g. `printLine "hello world"`).
-While this seems like a sane and flexible approach, it comes at the cost of "reasonability". This is because statements hide side-effects, which are the the mortal enemies of clarity and determinism.*
+Most programmers build programs out of a mix of expressions (things that can be evaluated to produce a value, e.g. `5 + 7`) and statements (imperative instructions to a machine, e.g. `printLine "hello world"`).
+While this seems like a sane and flexible approach, it comes at the cost of "reasonability". This is because statements hide side-effects, which are the the mortal enemies of clarity and determinism.
 
 ## So what's the difference?
 
