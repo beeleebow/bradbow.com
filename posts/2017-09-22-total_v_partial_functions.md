@@ -4,7 +4,9 @@ title: "Why you should totally avoid partial functions"
 
 # TL;DR
 
-> **Functions** map values from their **domain** to values in their **co-domain**. **Total** functions have a total mapping between their domain and co-domain. **Partial** functions do not. This makes code that uses them hard to reason about and prone to bugs. Functions that throw exceptions are perfect examples of partial functions and their effect on reasonability.
+<div class="tldr">
+**Functions** map values from their **domain** to values in their **co-domain**. **Total functions** map every value in their domain to a value in their co-domain. **Partial functions** do not. This makes code that uses partial functions hard to reason about and prone to bugs.
+</div>
 
 ## Functions, domains, and co-domains
 

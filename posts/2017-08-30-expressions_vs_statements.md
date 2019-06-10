@@ -4,8 +4,12 @@ title: "How to express yourself without effecting others"
 
 ## TL;DR
 
-Most programmers build programs out of a mix of expressions (things that can be evaluated to produce a value, e.g. `5 + 7`) and statements (imperative instructions to a machine, e.g. `printLine "hello world"`).
-While this seems like a sane and flexible approach, it comes at the cost of "reasonability". This is because statements hide side-effects, which are the the mortal enemies of clarity and determinism.
+<div class="tldr">
+We typically build programs out of a mix of **expressions** and **statements**. Expressions can be **evaluated** to produce a value, e.g. <code class="language-csharp">5 + 7</code> produces <code class="language-csharp">12</code>. Statements do not produce values, they exist to have some effect (or side-effect), e.g. <code class="language-csharp">Console.Write("Hello world")</code>.
+
+**Preferring expressions over statements** will result in easier to reason about, **more honoest** code.
+
+</div>
 
 ## So what's the difference?
 

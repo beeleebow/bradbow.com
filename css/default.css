@@ -6,6 +6,12 @@ strong {
   font-weight: bolder;
 }
 
+.tldr {
+  background-color: #ffffe6;
+  border-radius: 10px;
+  border: solid #000000 2px;
+  padding: 10px 40px;
+}
 
 body {
   font-size: 1.8rem;

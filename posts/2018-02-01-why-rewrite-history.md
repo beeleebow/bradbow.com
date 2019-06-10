@@ -4,7 +4,9 @@ title: Reasons to Rewrite your Git History
 
 # TL;DR
 
-_Your code base is a story and the commit history is the plot. Rewriting your Git history keeps your story free from triviality and irrelevant distraction. Taking a more disciplined approach to structuring your commits can also improve the PR process by adding a narrative arc that the reviewer can follow and breaking down large reviews into a digestible series of sequenced change sets. You may even find that remaining "Git-aware" encourages a helpful amount of planning that results in better structured, cleaner code._
+<div class="tldr">
+Your **Git history is a story** and your commits are the major plot points. Rewriting your Git history keeps your story **free from triviality and irrelevant distraction**. Taking a more disciplined approach to structuring your commits can also **improve the PR process** by adding a narrative arc that the reviewer can follow and large PRs are made easier when you can review a commit at a time. You may even find that remaining "Git-aware" encourages a helpful amount of forethought that results in **better-structured, cleaner code**.
+</div>
 
 ## Rewriting Git history?
 
