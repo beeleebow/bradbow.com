@@ -40,7 +40,7 @@ Hopefully your day has less crying in it than mine does, but I'm willing to bet 
 
 That doesn't mean that these mistakes have to immortalized and remembered for all of time though. If you commit often throughout your mistake-filled days then you are probably going to end up with a commit history like this:
 
-![a noisy git history](../images/2018-02-01-why-rewrite-history/1.png)
+![A noisy git history](../images/2018-02-01-why-rewrite-history/1-resized.png)
 
 This is definitely honest. There are all your mistakes, right out in the open for the everyone to see. What is to be gained from this honesty though? Noise and distraction, it seems. If your Git history is a story, then the history above is a 3 hour epic filled with distracting plot deviations.
 
@@ -54,7 +54,7 @@ Just like your source code, the commit history will be read more than it is writ
 
 The beautiful thing about Git is that once we have finished our work and corrected our mistakes we can rewrite the history to express the successful end state and exclude our irrelevant whoopsy-daisies. Sticking with our example, we could move from the noisy history above to something like this:
 
-![a clear, concise git history](../images/2018-02-01-why-rewrite-history/2.png)
+![A concise Git history](../images/2018-02-01-why-rewrite-history/2-resized.png)
 
 We've cut the plot points back to the bare minimum required for our story to make sense. This has the added benefit of making us look much better than we actually are come peer review time.
 
