@@ -15,12 +15,12 @@ We typically build programs out of a mix of **expressions** and **statements**. 
 
 An **expression** is a composition of values and sub-expressions which, upon *evaluation*, reduces to a single value. Let's take some simple mathematical examples.
 
-<pre class="line-numbers"><code class="language-csharp">5 + 7
+<pre><code class="language-csharp">5 + 7
 3 * (4 - 1)
 7*x + 5
 </code></pre>
 
-Example 1 is a *simple* expression, meaning there is only one evaluation needed to produce a value, in this case `12`. The second example is a *compound* expression because it is composed of two simple sub-expressions. First, we evaluate `4-1`, then we multiply that value with `3`. Finally, example 3 is a *parameterised, compound* expression. Given a value for `x` (the parameter) we can evaluate `7*x` then add `5` to this value.
+Example 1 is a *simple* expression, meaning there is only one evaluation needed to produce a value, in this case <code class=language-csharp>12</code>. The second example is a *compound* expression because it is composed of two simple sub-expressions. First, we evaluate <code class=language-csharp>4 - 1</code>, then we multiply that value with <code class=language-csharp>3</code>. Finally, example 3 is a *parameterised, compound* expression. Given a value for <code class=language-csharp>x</code> (the parameter) we can evaluate <code class=language-csharp>7 * x</code> then add <code class=language-csharp>5</code> to this value.
 
 A **statement** does not produce a value. It is an imperative instruction to the machine to do something. Let's have a look at some familiar statements.
 
@@ -38,7 +38,7 @@ if(_listOfIntegers.Length > 0){
 </code></pre>
 
 <code class="language-csharp">var x = 1;</code> is a statement (i.e. the *assignment* statement).
-It says: "Give me enough memory to hold an integer, put the value `1` into that memory, and address
+It says: "Give me enough memory to hold an integer, put the value <code class=language-csharp>1</code> into that memory, and address
 the memory as <code class="language-csharp">x</code> so I can refer to it later".
 Writing to the Console or logging are also statements. You don't get values back
 from running them. The <code class="language-csharp">if</code> construct in most
@@ -73,10 +73,10 @@ Invocations of both <code class="language-csharp">PureAdd</code> and <code class
 
 Try to build as much of your program as you can out of pure expressions and limit the use of statements. Here are a few tips:
 
-* **Don't write `void` methods/functions.** A method/function that doesn't return anything is just another statement. Your programming language probably has enough of those already. You don't need to be adding more.
+* **Don't write <code class=language-csharp>void</code> methods/functions.** A method/function that doesn't return anything is just another statement. Your programming language probably has enough of those already. You don't need to be adding more.
 * **Side effects at the edges, pure in the middle** The reality is that your program needs to perform side effects to be useful. At some point you'll need to read from a database or write to a response stream. Don't let these concerns pollute your entire program. Fence them off as soon as you can and keep those side effects out or your pure application logic.
 * **Avoid mutation.** Mutation destroys determinism. That is, you can't expect the same output for the same inputs every time if things are being changed along the way.
-* **Replace control flow structures and error handling with type driven alternatives.** Instead of having a `Person` object that can be null represent the nullability in a type, e.g. `Option<Person>`. Instead of throwing an exception, represent that an evaluation might fail in a type, e.g. `Either<Exception, Person>`.
+* **Replace control flow structures and error handling with type driven alternatives.** Instead of having a <code class=language-csharp>Person</code> object that can be null represent the nullability in a type, e.g. <code class=language-csharp>Option<Person></code>. Instead of throwing an exception, represent that an evaluation might fail in a type, e.g. <code class=language-csharp>Either<Exception, Person></code>.
 
 Go forth and express yourself.
 

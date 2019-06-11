@@ -9,7 +9,7 @@ strong {
 .tldr {
   background-color: #ffffe6;
   border-radius: 10px;
-  border: solid #000000 2px;
+  border: solid #905 2px;
   padding: 10px 40px;
 }
 
@@ -153,8 +153,9 @@ article .header {
 }
 
 blockquote {
-  background-color: #f0f5f5;
-  border: 2px dotted #f0f5f5;
+  /* background-color: #f5f2f0; */
+  background-color: #ffffe6;
+  border: 1px solid #905;
   border-radius: 15px 15px;
   margin: 0px;
   padding: 0em 1.6em;
