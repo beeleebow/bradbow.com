@@ -161,4 +161,12 @@ blockquote {
   padding: 0em 1.6em;
 }
 
+figure {
+  margin: auto;
+  text-align: center;
+}
 
+figcaption {
+  font-size: 1.3rem;
+  font-style: italic;
+}
