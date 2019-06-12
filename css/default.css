@@ -170,3 +170,7 @@ figcaption {
   font-size: 1.3rem;
   font-style: italic;
 }
+
+.profile-picture img {
+  border-radius: 50%;
+}
