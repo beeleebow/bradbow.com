@@ -12,7 +12,7 @@ numberOfPostsToShowOnHome = 4
 main :: IO ()
 main = hakyll $ do
 
-    match ("images/*" .||. "images/**/*" .||. "videos/*") $ do
+    match ("images/*" .||. "images/**/*") $ do
         route   idRoute
         compile copyFileCompiler
 
