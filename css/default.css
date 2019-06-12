@@ -152,13 +152,22 @@ article .header {
   }
 }
 
-blockquote {
-  /* background-color: #f5f2f0; */
+blockquote, .callout {
   background-color: #ffffe6;
   border: 1px solid #905;
   border-radius: 15px 15px;
   margin: 0px;
   padding: 0em 1.6em;
+}
+
+.callout {
+  margin: 10px;
+}
+
+.quote {
+  background-color: #ffe6f4;
+  border-radius: 15px 15px;
+  padding: 18px 20px 0px 20px;
 }
 
 figure {
