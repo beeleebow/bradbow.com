@@ -4,12 +4,12 @@ tags: one, two
 ---
 
 <div class="profile-picture">
-![A picture of Brad](./images/brad.png)
+![A picture of a Brad](./images/brad-pitt.png)
 </div>
 
 I am a Software Developer/Engineer who never knows whether
-to call himself a Developer or Engineer. Engineer _sounds_ better
-I think, so let's go with Developer.
+to call himself a Developer or Engineer. Engineer sounds better,
+so let's go with Developer.
 
 I live in Brisbane, Australia, where I work for
 [Stacktrace](https://stacktracehq.com). My current day-to-day is
