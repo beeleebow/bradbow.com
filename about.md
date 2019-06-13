@@ -23,8 +23,8 @@ In my experience this is unreasonably hard to do. If you have magic
 beans, I will buy them. Something, something, Mircoservices.
 
 I've gone on a functional programming journey in the past couple of years.
-I believed I was reaching a summit, but apparently I'm still in my
-driveway, at the bottom of a hill beneath a bus stop, where I can catch
+I believed I was reaching a summit of sorts, but apparently I'm still in my
+driveway, at the bottom of a hill, beneath a bus stop where I can catch
 a bus to the airport and get a plane to where the mountain actually is.
 I miss my family.
 

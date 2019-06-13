@@ -55,10 +55,9 @@ main = hakyll $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let recentPosts = take numberOfPostsToShowOnHome posts
             let indexCtx =
-                    listField "posts" postCtx (return recentPosts) `mappend`
-                    constField "title" "Welcome"                `mappend`
+                    listField "posts" postCtx (return posts) `mappend`
+                    constField "title" "Posts"             `mappend`
                     defaultContext
 
             getResourceBody
@@ -67,7 +66,6 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
-
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
