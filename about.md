@@ -4,7 +4,7 @@ tags: one, two
 ---
 
 <div class="profile-picture">
-![A picture of a Brad](./images/brad-pitt.png)
+![A picture of Brad](./images/brad.png)
 </div>
 
 I am a Software Developer/Engineer who never knows whether
