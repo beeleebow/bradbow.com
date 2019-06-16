@@ -58,25 +58,25 @@ public int ImpureAdd(int x, int y)
 }
 </code></pre>
 
-Invocations of <code class="language-csharp">PureAdd</code> and <code class="language-csharp">ImpureAdd</code> both produce values. Evaluation of <code class="language-csharp">ImpureAdd</code>, however, also produces the side effect of writing a message to the console. The effect is achieved by calling the `Console.WriteLine` method, which we can think of as a statement, since it doens't return a value.
+Invocations of <code class="language-csharp">PureAdd</code> and <code class="language-csharp">ImpureAdd</code> both produce values. Evaluation of <code class="language-csharp">ImpureAdd</code>, however, also produces the side effect of writing a message to the console. The effect is achieved by calling the <code class="language-csharp">Console.WriteLine</code> method, which we can think of as a statement, since it doens't return a value.
 
-Now let's imagine that we, correctly, realise that having our own method for adding two `int` values is silly and decide
-to replace any usage of our method with the built in `+` operator. To rectify this, we'll just do a regex-based find and
+Now let's imagine that we, correctly, realise that having our own method for adding two <code class="language-csharp">int</code> values is silly and decide
+to replace any usage of our method with the built in <code class="language-csharp">+</code> operator. To rectify this, we'll just do a regex-based find and
 replace across all our source files.
 
-If we've used `PureAdd` then our regex would replace `PureAdd(x, y)` with `x + y`. When we run our program after this
+If we've used <code class="language-csharp">PureAdd</code> then our regex would replace <code class="language-csharp">PureAdd(x, y)</code> with `x + y`. When we run our program after this
 change, nothing will actually be different. We won't produce any new output, or change the results in any way.
 
-However, if we've used `ImpureAdd` then our regex would replace `ImpureAdd(x, y)` with `x + y`. This will result
-in the same produced value, but we would have changed our program's output. The program that called `ImpureAdd(x, y)` would
-have been producing console output, because of the `Console.WriteLine`. The program that inlines `x + y` will not produce
+However, if we've used <code class="language-csharp">ImpureAdd</code> then our regex would replace <code class="language-csharp">ImpureAdd(x, y)</code> with `x + y`. This will result
+in the same produced value, but we would have changed our program's output. The program that called <code class="language-csharp">ImpureAdd(x, y)</code> would
+have been producing console output, because of the <code class="language-csharp">Console.WriteLine</code>. The program that inlines <code class="language-csharp">x + y</code> will not produce
 this output. By making what seems to be a like-for-like substitution, we've actually changed the behaviour or our
 running program.
 
 We've all worked on code bases that seem to get harder and harder to change over time. This is due, in large part,
 to an accumlation of hard-to-discover side-effects. I change code over here, and now code over here is broken.
 One of the main causes of this state of affairs is the over-use of statements, because statements are **always side-effecting**
-(except for silly examples like empty `if` blocks).
+(except for silly examples like empty <code class="language-csharp">if</code> blocks).
 Think about it. How can you possibly have a statement that doesn't have a side effect? It has to
 do *something*, and it doesn't produce a value.
 
