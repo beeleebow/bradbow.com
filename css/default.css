@@ -2,20 +2,14 @@ html {
   font-size: 75.5%;
 }
 
-@media (max-width: 500px) {
-  html {
-    font-size: 65.5%;
-  }
-}
-
 strong {
   font-weight: bolder;
 }
 
 .tldr {
-  background-color: #ffffe6;
+  background-color: #fdf6e3;
   border-radius: 10px;
-  border: solid #905 2px;
+  border: solid #b58900 2px;
   padding: 10px 40px;
 }
 
@@ -159,9 +153,9 @@ article .header {
 }
 
 blockquote, .callout {
-  background-color: #ffffe6;
-  border: 1px solid #905;
-  border-radius: 15px 15px;
+  background-color: #fdf6e3;
+  border: 1px solid #b58900;
+  border-radius: 0px;
   margin: 0px;
   padding: 0em 1.6em;
 }
@@ -188,4 +182,32 @@ figcaption {
 
 .profile-picture img {
   border-radius: 50%;
+}
+
+article a {
+  color: #b58900;
+}
+
+pre[class*="language-"]{
+  font-size: 16px;
+  border: 1px solid #bf8900;
+  border-radius: 0px;
+}
+
+code[class*="language-"]{
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65.5%;
+  }
+
+  pre[class*="language-"]{
+    font-size: 10px;
+  }
+
+  code[class*="language-"]{
+    font-size: 13px;
+  }
 }
