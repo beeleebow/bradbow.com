@@ -53,7 +53,7 @@ This irresponsible behaviour makes <code class=language-csharp>CalculateAverageI
 
 ## Getting back to Total Trust
 
-There is nothing more sacred than the relationship between a programmer and his functions. We must mend this rift, lest we doom ourselves
+There is nothing more sacred than the relationship between a programmer and their functions. We must mend this rift, lest we doom ourselves
 to a broken existence, full of pain and suffering.
 
 Let's start with a healthy dose of honesty. **There is no function we could write** that returns a <code class="language-csharp">decimal</code> output for every possible <code class="language-csharp">Cart</code> input. It doesn't exist, because a cart with no items in it doesn't have a average per-item cost. We simply can't satisfy this signature.
@@ -75,7 +75,7 @@ If we can't guarantee that we can return a <code class="language-csharp">decimal
 ) =>
   cart.Items.Length > 0
     ? Just(cart.Items.Sum(i => i.Price) / cart.Items.Length)
-    : Empty;
+    : Empty();
 </code></pre>
 
 <code class="language-csharp">Just</code> and <code class="language-csharp">Empty</code> are both functions that return a value of type <code class="language-csharp">Maybe<decimal></code>. <code class="language-csharp">Just</code> puts a decimal "inside" the <code class="language-csharp">Maybe</code> structure while
