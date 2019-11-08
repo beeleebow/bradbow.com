@@ -15,6 +15,10 @@ I have built software for several industries, using a slew of
 languages, frameworks, and tools. I enjoy building useful software as simply as possible.
 In my experience this is unreasonably hard to do.
 
+I've authored a
+[Pluralsight course on Rewriting Git History](https://app.pluralsight.com/library/courses/rewriting-git-history/table-of-contents).
+which you should watch (I get paid when you do).
+
 You can find me on:
 
 * [GitHub](https://github.com/beeleebow)
