@@ -1,21 +1,6 @@
 ---
-title: Misc
+title: "Recommended FP Courses"
 ---
-
-I didn't want a menu with more than three items in it, so I'm
-going to put everything else here. Don't worry, I'll use headings.
-
-## Pluralsight
-
-I upped my Git game a couple of years ago and helped a few
-colleagues to do the same. In doing so I discovered an enjoyment
-for teaching and story-telling. I also have a general fondness
-for money. I brought these two things together and authored a
-[Pluralsight course on Rewriting Git History](https://app.pluralsight.com/library/courses/rewriting-git-history/table-of-contents).
-
-I'm considering authoring another course in the near future.
-
-## Functional Programming Adventures
 
 I've been diving into the big wide world of FP (that's Functional
 Programming speak for Functional Programming). I still have quite
