@@ -7,7 +7,7 @@ import           Hakyll
 
 --------------------------------------------------------------------------------
 numberOfPostsToShowOnHome :: Int
-numberOfPostsToShowOnHome = 4
+numberOfPostsToShowOnHome = 10
 
 main :: IO ()
 main = hakyll $ do
